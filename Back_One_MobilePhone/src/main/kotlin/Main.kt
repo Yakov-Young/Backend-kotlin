@@ -5,7 +5,7 @@ fun main() {
 
     var mobilePhone: MobilePhone = MobilePhone(myNumberPhone)
     do {
-        println("\nСписок контактов: ")
+        println("\nСписок контактов:")
         mobilePhone.printContacts()
 
         println("  \nВыберите действие:\n" +
@@ -49,7 +49,12 @@ fun main() {
 
                 val newContact = Contact(name,numberPhone)
 
-                mobilePhone.updateContact(oldContact, newContact)
+                if (mobilePhone.updateContact(oldContact, newContact)) {
+                    println("Контакт успешно изменен")
+                }
+                else {
+                    println("Контакт не найден")
+                }
             }
             3 -> {
                 print("Введите данные о контатке\n" +
@@ -61,7 +66,12 @@ fun main() {
 
                 val contact = Contact(name,numberPhone)
 
-                mobilePhone.removeContact(contact)
+                if (mobilePhone.removeContact(contact)) {
+                    println("Контакт удален")
+                }
+                else {
+                    println("Контакт не найден")
+                }
             }
             4 -> {
                 print("Введите данные о контатке\n" +
@@ -73,14 +83,27 @@ fun main() {
 
                 val contact = Contact(name,numberPhone)
 
-                mobilePhone.findContact(contact)
+                val index = mobilePhone.findContact(contact)
+
+                if (index != -1) {
+                    println("Результат поиска: ${mobilePhone.Book[index]}")
+                }
+                else {
+                    println("По вашему запросу ничего не найдено")
+                }
             }
             5 -> {
                 print("Введите данные о контатке\n" +
                         "Имя: ")
-                var name = readln()
+                val name = readln()
 
-                mobilePhone.queryContact(name)
+                val data = mobilePhone.queryContact(name)
+                if (data == null) {
+                    println("По вашему запросу ничего не найдено")
+                }
+                else {
+                    println("Результат поиска: $data")
+                }
             }
         }
 
