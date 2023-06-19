@@ -12,13 +12,12 @@ import jakarta.servlet.http.HttpServletResponse
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.http.ResponseEntity
-import org.springframework.stereotype.Component
 import org.springframework.web.bind.annotation.*
 import java.util.*
 
 @RestController
 @RequestMapping("/api")
-class LoginController(@Autowired val userService: UserService) {
+class LogController(@Autowired val userService: UserService) {
 
     @Value("\${jwt.secret}")
     private val secret: String? = null

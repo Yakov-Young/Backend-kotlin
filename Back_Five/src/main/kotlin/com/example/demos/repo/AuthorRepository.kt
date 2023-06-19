@@ -5,4 +5,6 @@ import com.example.demos.models.Book
 import org.springframework.data.jpa.repository.JpaRepository
 
 interface AuthorRepository: JpaRepository<Author, Long> {
+    override fun getById(id: Long): Author
+
 }

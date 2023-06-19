@@ -34,6 +34,6 @@ data class Book(
         name = "book_review", schema = "books",
         joinColumns = [JoinColumn(name = "book_id", referencedColumnName="id")],
         inverseJoinColumns = [JoinColumn(name = "review_id", referencedColumnName="id")])
-    val reviews: Set<Review>
+    val reviews: Set<Review>?
 
 )
