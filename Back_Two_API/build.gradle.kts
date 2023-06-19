@@ -1,35 +1,40 @@
-plugins {
-    kotlin("jvm") version "1.8.0"
-    kotlin("plugin.serialization") version "1.8.0"
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
-    application
+plugins {
+	id("org.springframework.boot") version "3.1.0"
+	id("io.spring.dependency-management") version "1.1.0"
+	kotlin("jvm") version "1.8.21"
+	kotlin("plugin.spring") version "1.8.21"
+	kotlin("plugin.jpa") version "1.8.21"
 }
 
-group = "org.example"
-version = "1.0-SNAPSHOT"
+group = "com.example"
+version = "0.0.1-SNAPSHOT"
+
+java {
+	sourceCompatibility = JavaVersion.VERSION_17
+}
 
 repositories {
-    mavenCentral()
+	mavenCentral()
 }
 
 dependencies {
-    implementation(group= "org.hibernate.validator", name="hibernate-validator", version= "8.0.0.Final")
-    implementation("com.squareup.okhttp3:mockwebserver:4.10.0")
-    implementation(group= "com.fasterxml.jackson.module", name= "jackson-module-kotlin", version= "2.11.2")
-    implementation(group= "javax.validation", name= "validation-api", version= "2.0.1.Final")
-    implementation(group= "org.jetbrains.kotlinx", name="kotlinx-serialization-json-jvm", version="1.5.0")
-
-    testImplementation(kotlin("test"))
+	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+	implementation("org.springframework.boot:spring-boot-starter-web")
+	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+	implementation("org.jetbrains.kotlin:kotlin-reflect")
+	implementation("org.springframework.boot:spring-boot-starter-validation:3.1.0")
+	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
-tasks.test {
-    useJUnitPlatform()
+tasks.withType<KotlinCompile> {
+	kotlinOptions {
+		freeCompilerArgs += "-Xjsr305=strict"
+		jvmTarget = "17"
+	}
 }
 
-kotlin {
-    jvmToolchain(8)
-}
-
-application {
-    mainClass.set("MainKt")
+tasks.withType<Test> {
+	useJUnitPlatform()
 }
