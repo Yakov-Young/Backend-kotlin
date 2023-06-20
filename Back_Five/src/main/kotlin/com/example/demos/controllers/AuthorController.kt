@@ -24,7 +24,7 @@ class AuthorController(@Autowired val authorService: AuthorService) {
     @PostMapping
     fun saveAuthor(@RequestBody body: Author, @CookieValue jwt: String?): ResponseEntity<Author> {
         CheckLog().check(jwt)
-        val author = Author(null, body.name, body.dateOfBirth, body.dateOfDeath, body.country)
+        val author = Author(null, body.name, body.dateOfBirth, body.dateOfDeath, body.country, null)
 
         return ResponseEntity.ok().body(this.authorService.save(author))
     }

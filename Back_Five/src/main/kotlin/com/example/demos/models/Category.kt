@@ -1,5 +1,6 @@
 package com.example.demos.models
 
+import com.fasterxml.jackson.annotation.JsonIgnore
 import jakarta.persistence.*
 
 @Entity

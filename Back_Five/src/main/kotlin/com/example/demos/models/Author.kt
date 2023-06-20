@@ -1,5 +1,7 @@
 package com.example.demos.models
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties
+import com.fasterxml.jackson.annotation.JsonIncludeProperties
 import jakarta.persistence.*
 import java.time.LocalDateTime
 
@@ -8,21 +10,26 @@ import java.time.LocalDateTime
 data class Author(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long?,
+    var id: Long?,
 
     @Column(nullable = false)
-    val name: String,
+    var name: String,
 
     @Column(name = "date_of_birth", nullable = true)
-    val dateOfBirth: LocalDateTime?,
+    var dateOfBirth: LocalDateTime?,
 
     @Column(name = "date_of_death", nullable = true)
-    val dateOfDeath: LocalDateTime?,
+    var dateOfDeath: LocalDateTime?,
 
     @Column(nullable = false)
-    val country: String,
+    var country: String,
 
-    /*@ManyToMany(fetch = FetchType.EAGER, mappedBy = "authors")
-    var books: Set<Book>*/
+    @OneToMany(fetch = FetchType.LAZY)
+    @JsonIncludeProperties(value= ["title", "isbn"])
+    @JoinTable(
+        name = "book_review", schema = "books",
+        joinColumns = [JoinColumn(name = "review_id", referencedColumnName="id")],
+        inverseJoinColumns = [JoinColumn(name = "book_id", referencedColumnName="id")])
+    var books: Set<Book>?
 
 )

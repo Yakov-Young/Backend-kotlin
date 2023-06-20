@@ -26,7 +26,7 @@ class BookController(@Autowired private val bookService: BookService) {
     @PostMapping
     fun saveBook(@RequestBody body: Book, @CookieValue jwt: String?): ResponseEntity<Book> {
         CheckLog().check(jwt)
-        val book = Book(null, body.title, body.description, body.isbn, body.category, body.authors, null)
+        val book = Book(null, body.title, body.description, body.isbn, body.category, body.author, null)
 
         return ResponseEntity.ok().body(this.bookService.save(book))
     }
@@ -37,6 +37,12 @@ class BookController(@Autowired private val bookService: BookService) {
 
         this.bookService.deleteById(id)
         return ResponseEntity.ok("Success")
+    }
+
+    @GetMapping("/category/{category}")
+    fun findByCategory(@PathVariable category: Long, @CookieValue jwt: String?): ResponseEntity<List<Book>?> {
+        CheckLog().check(jwt)
+        return ResponseEntity.ok().body(this.bookService.findByCategory(category))
     }
 
 }

@@ -1,8 +1,7 @@
 package com.example.demos.services
 
-import com.example.demos.models.Book
 import com.example.demos.models.Review
-import com.example.demos.repo.ReviewRepository
+import com.example.demos.repository.ReviewRepository
 import org.springframework.lang.NonNull
 import org.springframework.stereotype.Service
 import org.springframework.web.bind.annotation.RequestBody

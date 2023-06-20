@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d34e25d2-c6cd-4951-9ac4-494465f71916" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Back_Five/src/main/kotlin/com/example/demos/controllers/AuthorController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Back_Five/src/main/kotlin/com/example/demos/controllers/AuthorController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back_Five/src/main/kotlin/com/example/demos/controllers/BookController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Back_Five/src/main/kotlin/com/example/demos/controllers/BookController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back_Five/src/main/kotlin/com/example/demos/models/Author.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Back_Five/src/main/kotlin/com/example/demos/models/Author.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back_Five/src/main/kotlin/com/example/demos/models/Book.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Back_Five/src/main/kotlin/com/example/demos/models/Book.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back_Five/src/main/kotlin/com/example/demos/models/Category.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Back_Five/src/main/kotlin/com/example/demos/models/Category.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back_Five/src/main/kotlin/com/example/demos/repo/BookRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Back_Five/src/main/kotlin/com/example/demos/repo/BookRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back_Five/src/main/kotlin/com/example/demos/services/BookService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Back_Five/src/main/kotlin/com/example/demos/services/BookService.kt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Kotlin Interface" />
+        <option value="HTML File" />
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2R6WNQ8X86tG10Kv5em9HWdOWBl" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/stars/IdeaProjects/Backend/Back_Five",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\stars\IdeaProjects\demos\src\main\resources\templates" />
+      <recent name="C:\Users\stars\IdeaProjects\demos\src\main\resources\static" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\stars\IdeaProjects\demos\src\main\resources\templates" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.example.demos.models" />
+      <recent name="com.example.demos.controllers" />
+      <recent name="com.example.demos.error" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="maven" />
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="Back_Five" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="Back_Five" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d34e25d2-c6cd-4951-9ac4-494465f71916" name="Changes" comment="" />
+      <created>1686570978232</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1686570978232</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-function">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/com/example/demos/services/BookService.kt</url>
+          <line>18</line>
+          <properties class="com.example.demos.services.BookService" method="findByCategory">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

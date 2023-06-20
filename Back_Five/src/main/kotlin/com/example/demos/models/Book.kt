@@ -1,39 +1,45 @@
 package com.example.demos.models
 
+import com.fasterxml.jackson.annotation.JsonGetter
+import com.fasterxml.jackson.annotation.JsonIncludeProperties
 import jakarta.persistence.*
 
 @Entity
 @Table(name = "book", schema = "books")
+//@NamedQuery(name="Book.getByCategory", query="SELECT t1.id FROM books.book t1 WHERE t1.category_id = ?1")
 data class Book(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long?,
+    var id: Long?,
 
     @Column(nullable = false)
-    val title: String,
+    var title: String,
 
     @Column(nullable = false)
-    val description: String,
+    var description: String,
 
     @Column(name = "ISBN", nullable = false)
-    val isbn: String,
+    var isbn: String,
 
     @OneToOne(fetch = FetchType.LAZY)
+    @JsonIncludeProperties(value=["categoryName"])
     @JoinColumn(name = "category_id", nullable = false)
-    val category: Category,
+    var category: Category,
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinTable(
         name = "book_author", schema = "books",
         joinColumns = [JoinColumn(name = "book_id", referencedColumnName="id")],
         inverseJoinColumns = [JoinColumn(name = "author_id", referencedColumnName="id")])
-    var authors: Author,
+    @JsonIncludeProperties(value=["name"])
+    var author: Author,
 
     @OneToMany(fetch = FetchType.LAZY)
     @JoinTable(
         name = "book_review", schema = "books",
         joinColumns = [JoinColumn(name = "book_id", referencedColumnName="id")],
         inverseJoinColumns = [JoinColumn(name = "review_id", referencedColumnName="id")])
+    @JsonIncludeProperties(value=["user", "rate"])
     val reviews: Set<Review>?
 
 )

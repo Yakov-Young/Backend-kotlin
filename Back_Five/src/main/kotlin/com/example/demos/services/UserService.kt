@@ -1,7 +1,7 @@
 package com.example.demos.services
 
 import com.example.demos.models.User
-import com.example.demos.repo.UserRepository
+import com.example.demos.repository.UserRepository
 import org.springframework.lang.NonNull
 import org.springframework.stereotype.Service
 
